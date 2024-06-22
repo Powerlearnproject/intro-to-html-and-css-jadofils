@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Expense Tracker</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#register">Register</a>
+            <a href="#login">Login</a>
+            <a href="#add_expense">Add Expense</a>
+            <a href="#view_expense">View Expenses</a>
+
+        </nav>
+        <img id="menu-icon" src="menuIcons.jpeg" alt="Menu" tabindex="0">
+
+    </header>
+
+    <!-- Sections -->
+    <section id="about" class="active">
+        <h2>About Us</h2>
+        <p>
+            Hello, my name is <strong>Jado Fils</strong>. I am a student in the PowerLearn Project, cohort 3, studying software engineering courses. I am still learning and expected to get my certificate in four months.
+        </p>
+        <p>
+            PowerLearn Project is a great bootcamp. 
+            I recommend it to everyone interested in scholarships.
+             We offer courses in<strong> databases, Python, Flutter, Entrepreneurship, Web Technology,</strong>  and more.
+              I am also expected to pay<strong> $45</strong>  for <strong>PHP, Node.js, <strong> and</strong> React.js</strong>  to become a full-stack developer.
+        </p>
+    </section>
+
+    <section id="register">
+        <h2>Register</h2>
+        <form action="/register" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+            <p>Already have an account? <a href="login">Login here</a></p>
+
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+            <p>Don't you have an account? <a href="register">Register</a></p>
+        </form>
+    </section>
+
+    <section id="add_expense">
+        <h2>Add Expense</h2>
+        <form action="/add_expense" method="post">
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div>
+                <button type="submit">Add Expense</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="view_expense">
+        <h2>View Expenses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows -->
+                <tr>
+                    <td>2024-06-22</td>
+                    <td>$100</td>
+                    <td>Groceries</td>
+                    <td>
+                        <a href="#edit">Edit</a>
+                        <a href="#delete">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2024-06-23</td>
+                    <td>$50</td>
+                    <td>Transportation</td>
+                    <td>
+                        <a href="#edit">Edit</a>
+                        <a href="#delete">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2024-06-24</td>
+                    <td>$200</td>
+                    <td>Dinner</td>
+                    <td>
+                        <a href="#edit">Edit</a>
+                        <a href="#delete">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        // Get references to the sections
+        const about = document.getElementById('about');
+        const register = document.getElementById('register');
+        const login = document.getElementById('login');
+        const add_expense = document.getElementById('add_expense');
+        const view_expense = document.getElementById('view_expense');
+        
+        // Function to hide all sections except the selected one
+        function showSection(sectionToShow) {
+            // Hide all sections
+            about.style.display = 'none';
+            register.style.display = 'none';
+            login.style.display = 'none';
+            add_expense.style.display = 'none';
+            view_expense.style.display = 'none';
+
+            // Display the selected section
+            sectionToShow.style.display = 'block';
+        }
+
+        // Set about as default displayed on index.html (assuming it's initially shown)
+        showSection(about);
+
+        // Event listeners for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior (scrolling)
+
+                // Get the target section ID from href attribute
+                const targetId = this.getAttribute('href').substring(1); // Remove the '#' from href
+
+                // Show the corresponding section
+                if (targetId === 'about') {
+                    showSection(about);
+                } else if (targetId === 'register') {
+                    showSection(register);
+                } else if (targetId === 'login') {
+                    showSection(login);
+                } else if (targetId === 'add_expense') {
+                    showSection(add_expense);
+                } else if (targetId === 'view_expense') {
+                    showSection(view_expense);
+                }
+            });
+        });
+    </script>
+<footer>
+    <h1>Touch On Us:</h1>
+    <div class="footer-cards">
+        <div class="footer-card">
+            <h2>Communication</h2>
+            <p>Email us at: <a href="mailto:jadofilsgeeksforgeeks@gmail.com">jadofilsgeeksforgeeks@gmail.com</a></p>
+            <p>Call us: <a href="tel:+250727210120">+250727210120</a></p>
+        </div>
+        <div class="footer-card">
+            <h2>Social Media</h2>
+            <p>Follow us on:</p>
+            <p><a href="https://www.instagram.com">Instagram</a></p>
+            <p><a href="https://github.com">GitHub</a></p>
+        </div>
+        <div class="footer-card">
+            <h2>About</h2>
+            <p><a href="#about">About Us</a></p>
+        </div>
+        <div class="footer-card">
+            <h2>Support</h2>
+            <p>For support, visit our <a href="#support">Support Page</a>.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; <span id="current-year"></span> All rights reserved.
+    </div>
+</footer>
+</body>
+</html>

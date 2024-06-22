@@ -1,0 +1,380 @@
+/* General body styles */
+
+@media (max-width: 600px) {
+    section {
+        font-size:12px; /* Stack the cards vertically on small screens */
+    margin:10px,10px,10px,10px;
+    width:70%;;
+    }
+    section table td a{
+display:flex;
+
+    }
+    section form {
+
+      min-width:200px ;/* Stack the cards vertically on small screens */
+    margin:auto;
+    }
+     body header  h1{
+        font-size:18px;
+    }
+    body footer h1{
+        font-size:16px;
+    }
+   
+   html body footer p{
+        font-size:12px;
+    }
+   
+}
+/*SIZE OF TABLETS*/
+@media (max-width: 1024px) {
+    body header nav a{
+        font-size:14px
+    }
+section {
+    font-size:14px; /* Stack the cards vertically on small screens */
+margin:10px,10px,10px,10px;
+width:70%;;
+}
+section table td a{
+display:flex;
+
+}
+section form {
+
+  min-width:600px ;/* Stack the cards vertically on small screens */
+margin:auto;
+}
+ body header  h1{
+    font-size:16px;
+}
+body footer h1{
+    font-size:14px;
+}
+
+html body footer p{
+    font-size:12px;
+}
+
+}
+/*size of desktop*/
+@media (min-width: 1025px) {
+    /* Desktop-specific styles */
+    body {
+        /* Adjustments for desktop layout */
+    }
+
+    /* Other desktop-specific styles */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgba(50, 50, 50, 1), rgba(90, 90, 90, 1));
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark background color for the header */
+    text-align: center; /* Center-align text within the header */
+    padding: 10px 0; /* Padding for top and bottom */
+}
+
+header nav {
+    text-align: center; /* Center-align text within the nav */
+}
+
+header nav a {
+    color: rgba(255, 255, 255, 1);
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* About Us section */
+#about {
+    max-width: 62%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#about h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+#about p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+#about strong {
+    color: #007bff;
+}
+
+#about ul {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+#about li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Other sections */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 1);
+    color: #666;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #666;
+}
+
+th {
+    background-color: rgba(242, 242, 242, 1);
+}
+
+/* Style odd and even rows */
+tr:nth-child(even) {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Hover effect on rows */
+tr:hover {
+    background-color: rgba(200, 200, 200, 0.5); /* Light grey on hover */
+}
+
+/* Style links for edit and delete */
+td a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on links */
+td a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Ensure relative positioning for absolute positioning of #menu-icon */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Menu icon styles */
+#menu-icon {
+    display: none; /* Initially hidden on larger screens */
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+@media (max-width: 600px) {
+    /* Styles for smaller screens */
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjust top position to accommodate header height */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    header nav .show {
+        display: flex;
+    }
+    
+    #menu-icon {
+        margin-top:10px;
+        border-radius:2px;
+        display: block; /* Displayed on smaller screens */
+        width: 20px; /* Adjust size as needed */
+        height: auto;
+        position: absolute;
+        top: 10px; /* Adjust top position as needed */
+        right: 10px; /* Adjust right position as needed */
+        cursor: pointer;
+    }
+    
+   
+}
+
+/*footer styles*/
+
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    text-align: center; /* Center-align text within the footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    color: rgba(255, 255, 255, 1);
+}
+
+footer h1 {
+    background-color: #333; /* Dark background color for the header */
+
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-cards {
+    display: flex;
+    justify-content: space-around; /* Space out the cards */
+    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-card {
+    background-color: #444; /* Slightly lighter background for the cards */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 200px; /* Minimum width to maintain card size */
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-card p {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-card a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.footer-card a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 1024px) {
+    .footer-cards {
+        flex-direction: rows; /* Stack the cards vertically on small screens */
+    }
+}
+@media (max-width: 600px) {
+    .footer-cards {
+        flex-direction: column; /* Stack the cards vertically on small screens */
+    }
+}
